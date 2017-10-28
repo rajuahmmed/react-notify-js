@@ -1,0 +1,18 @@
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+
+
+
+
+@import 'animations/in/bounce';
+@import 'animations/out/bounce';
+
+@import 'animations/in/bounce_down';
+@import 'animations/out/bounce_down';
+
+@import 'animations/in/bounce_up';
+@import 'animations/out/bounce_up';
