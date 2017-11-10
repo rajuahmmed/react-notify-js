@@ -1,6 +1,6 @@
 {
   "name": "react-notify-js",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Notification System",
   "main": "dist/index.js",
   "scripts": {
@@ -31,8 +31,12 @@
     "url": "https://github.com/rajuahmmed/react-notify-js/issues"
   },
   "homepage": "https://github.com/rajuahmmed/react-notify-js#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0"
+  },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -51,7 +55,6 @@
     "node-sass": "^4.5.3",
     "postcss": "^6.0.13",
     "postcss-cli": "^4.1.1",
-    "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "webpack": "^3.8.1",

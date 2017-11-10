@@ -20,6 +20,14 @@ class Notification extends Component{
 
         let el = findDOMNode(this);
 
+        const clientHeight = el.clientHeight
+
+        el.style.setProperty('height', '0px');
+
+        setTimeout(() => {
+            el.style.setProperty('height', (clientHeight + 20)+'px');
+        }, 5)
+
         this.setState({
             animation: `${animation}In animated`
         })
@@ -38,7 +46,13 @@ class Notification extends Component{
             animation: `${animation}Out animated`
         })
 
+        let parentEl = findDOMNode(this)
+
         el.addEventListener('animationend', () => {
+            parentEl.style.setProperty('height', '0px');
+        })
+
+        parentEl.addEventListener('transitionend', () => {
             remove(id)
         })
     }
@@ -47,9 +61,11 @@ class Notification extends Component{
 
 
         return (
-            <div className={`rnfy-item ${type} ${this.state.animation}`} onClick={e => {
-                this.removeIt(e.currentTarget)
-            }}>{message}</div>
+            <div className="rnfy-item-wrap">
+                <div className={`rnfy-item ${type} ${this.state.animation}`} onClick={e => {
+                    this.removeIt(e.currentTarget)
+                }}>{message}</div>
+            </div>
         )
     }
 }

@@ -6,14 +6,16 @@ var i = 0;
 class Button extends Component{
 
     render(){
+
+        const { addNotify } = this.props
         
         return(
             <button onClick={e => {
-                this.context.notify.add({
+                addNotify(this, {
                     message: "Hello World! "+i,
                     type: 'alert',
-                    animation: 'bounceUp',
-                    time: false
+                    animation: 'bounce',
+                    time: 5000
                 })
                 i++
             }}>Add</button>

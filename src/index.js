@@ -1,14 +1,22 @@
 import ReactNotifyJS from './ReactNotifyJS';
 import PropTypes from 'prop-types';
 
-export const connectRnfyJs = (component) => {
-    if(component.contextTypes == undefined){
-        component.contextTypes = {}
+export const connectRnfyJs = (ConnectComponent) => {
+    if(ConnectComponent.contextTypes == undefined){
+        ConnectComponent.contextTypes = {}
     }
-    component.contextTypes.notify = PropTypes.object
+    ConnectComponent.contextTypes.notify = PropTypes.object
+
+    if(ConnectComponent.defaultProps == undefined){
+        ConnectComponent.defaultProps = {}
+    }
+
+    ConnectComponent.defaultProps.addNotify =  ({ context: { notify: { add } } }, message) => {
+        add(message)
+    }
     
     
-    return component
+    return ConnectComponent
 }
 
 export default ReactNotifyJS;

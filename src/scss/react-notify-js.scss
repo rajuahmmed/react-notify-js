@@ -4,17 +4,17 @@
     right: 0;
     padding: 20px;
     transition: all 0.3s;
-}
-.rnfy-item{
-    position: relative;
-    // position: absolute;
-    // bottom: 0;
-    // right: 0;
-    // width: 100%;
-    background-color: rgb(240, 240, 240);
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: all 0.3s;
+
+    .rnfy-item-wrap{
+        transition: all 0.3s;
+
+        .rnfy-item{
+            position: relative;
+            background-color: rgb(240, 240, 240);
+            padding: 20px;
+            transition: all 0.3s;
+        }
+    }
 }
 
 @import "animation"

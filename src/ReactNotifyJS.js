@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import notifications from './notifications';
-import Notification from './Notification';
+import NotificationContainer from './NotificationContainer';
 
 class ReactNotifyJS extends Component{
     constructor(props){
@@ -50,16 +50,19 @@ class ReactNotifyJS extends Component{
         }};
     }
     render(){
-
+        
         return[
             this.props.children,
-            this.renderNotifyContainer()
+            <NotificationContainer key="notify-1" remove={this.removeNotification} items={this.state.items} />
         ]
     }
 }
 
+
 ReactNotifyJS.childContextTypes = {
     notify: PropTypes.object
 };
+
+
 
 export default ReactNotifyJS;
