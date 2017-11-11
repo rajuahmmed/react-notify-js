@@ -5,13 +5,24 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: [
-        path.join(__dirname, 'example/src/App.js')
+        path.join(__dirname, 'src/index.js')
     ],
     output: {
-        path: path.join(__dirname, 'example/dist/'),
-        filename: 'app.js'
+        path: path.join(__dirname, 'dist/'),
+        filename: 'ReactNotifyJS.min.js',
+        libraryTarget: 'umd',
+        library: 'ReactNotifyJS'
     },
-    devtool: 'source-map',
+    resolve: {
+        modules: [
+            path.join(__dirname, 'node_modules'),
+            path.join(__dirname, '..', '..', 'node_modules'),
+        ]
+    },
+    externals : {
+        react: 'React',
+        'react-dom': 'ReactDOM'
+    },
     module: {
         rules: [
             {
