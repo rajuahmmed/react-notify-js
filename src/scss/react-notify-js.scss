@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 20px;
+    padding: 0 20px;
     transition: all 0.3s;
 
     .rnfy-item-wrap{
@@ -10,9 +10,35 @@
 
         .rnfy-item{
             position: relative;
-            background-color: rgb(240, 240, 240);
-            padding: 20px;
+            background-color: #fff;
+            padding: 15px 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
             transition: all 0.3s;
+
+            &.success{
+                color: #155724;
+                background-color: #d4edda;
+                box-shadow: 0 0 10px #d4edda;
+            }
+
+            &.primary{
+                color: #004085;
+                background-color: #cce5ff;
+                box-shadow: 0 0 10px #cce5ff;
+            }
+
+            &.danger{
+                color: #721c24;
+                background-color: #f8d7da;
+                box-shadow: 0 0 10px #f8d7da;
+            }
+
+            &.warning{
+                color: #856404;
+                background-color: #fff3cd;
+                box-shadow: 0 0 10px #fff3cd;
+            }
         }
     }
 }
