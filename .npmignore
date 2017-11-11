@@ -1,2 +1,4 @@
-example/dist
+src
+css/react-notify-js.css.map
+example
 node_modules
