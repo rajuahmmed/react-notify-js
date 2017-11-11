@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connectRnfyJs } from '../../dist/index';
+import { connectRnfyJs } from '../../lib/index';
 
 var i = 0;
 

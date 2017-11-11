@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from './Button';
-import ReactNotifyJS from '../../dist/index';
+import ReactNotifyJS from '../../lib/index';
 
 class Hello extends Component{
 
